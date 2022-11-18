@@ -1,5 +1,5 @@
-html {
-    scroll-behavior: smooth;
+:root{
+    --hauteur-menu: 60px;
   }
 
 * {
@@ -30,8 +30,11 @@ header {
     align-items: center;
     height: 100px;
     width: 100%;
+    top: 0;
 }
-
+label, #toggle {
+    display: none;
+}
 .nav {
 	height: 100px;
     width: 100%;
@@ -39,6 +42,8 @@ header {
 	justify-content: center;
 	box-sizing: border-box;
 	align-items: center;
+    position: sticky;
+    top: 0;
 }
 
 .nav-id {
@@ -250,10 +255,18 @@ footer {
 
 @media screen and (max-width: 920px) {
     .nav ul .btn-nav {
-        margin: 0 20px;
+        margin: 0 10px;
+        font-size: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-
-    .btn-logo {
+    
+    header img.btn-logo {
+        display: flex;
+        justify-content: center;
+        width: 100px;
+        height: 100px;
         display: none;
     }
 
@@ -284,10 +297,21 @@ footer {
     .contact .btn-contact {
         display: flex;
         flex-direction: column;
-        align-items: left;
-        align-self: flex-start;
+        align-items: center;
         gap: 5px;
     }
+    .license img {
+        width: 25%;
+    }
+    
+    section.license h3{
+        font-size: 12px;
+    }
+   
+    footer p {
+        font-size: 10px;
+    }
+
 }
 
 .license {
@@ -298,6 +322,10 @@ footer {
     gap: 25px;
 }
 
-.license h2 {
-    
+.license img {
+    width: 75%;
+    height: 75%;
+}
+.license h3 {
+    font-size: 20px;
 }
